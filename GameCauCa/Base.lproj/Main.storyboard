@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GameCauCa" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,63 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ocean.png" translatesAutoresizingMaskIntoConstraints="NO" id="ICL-52-rWx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="FxO-XR-ELr"/>
+                                    <constraint firstAttribute="height" constant="667" id="rri-05-QHr"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5d-br-9T2">
+                                <rect key="frame" x="33" y="585" width="83" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="HMw-q4-m4R"/>
+                                    <constraint firstAttribute="height" constant="62" id="Vtk-TN-0HE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="1" green="0.057756586892145134" blue="0.092813736857310314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PdE-80-OBw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNM-T7-Lwp">
+                                <rect key="frame" x="250" y="585" width="79" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="ALQ-LG-WmN"/>
+                                    <constraint firstAttribute="width" constant="79" id="iBt-V1-pjF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <state key="normal" title="add Fish">
+                                    <color key="titleColor" red="1" green="0.25872371848895037" blue="0.18174170504040366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="add:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s2Y-JF-1Oh"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ICL-52-rWx" secondAttribute="bottom" id="13o-iw-eHN"/>
+                            <constraint firstItem="HNM-T7-Lwp" firstAttribute="leading" secondItem="x5d-br-9T2" secondAttribute="trailing" constant="134" id="3J6-Re-ziE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HNM-T7-Lwp" secondAttribute="trailing" constant="30" id="3gx-9l-GcN"/>
+                            <constraint firstItem="ICL-52-rWx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ClJ-F0-uIR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="x5d-br-9T2" secondAttribute="bottom" constant="20" id="GZm-Hy-WAX"/>
+                            <constraint firstItem="ICL-52-rWx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OLl-zn-bAs"/>
+                            <constraint firstAttribute="trailing" secondItem="ICL-52-rWx" secondAttribute="trailing" id="QvA-MZ-6hU"/>
+                            <constraint firstItem="x5d-br-9T2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="17" id="Z9Q-hx-gw8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HNM-T7-Lwp" secondAttribute="bottom" constant="36" id="wmE-QV-9Kp"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="100" y="122.78860569715144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ocean.png" width="2310" height="2481"/>
+    </resources>
 </document>
